@@ -1,0 +1,6 @@
+[submodule "Multidirection-frontend"]
+	path = Multidirection-frontend
+	url = git@github.com:TLMegalovania/Multidirection-frontend.git
+[submodule "Multidirection-backend"]
+	path = Multidirection-backend
+	url = git@github.com:TLMegalovania/Multidirection-backend.git

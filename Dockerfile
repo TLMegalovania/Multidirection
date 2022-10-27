@@ -14,9 +14,9 @@ RUN npm run build
 
 FROM alpine
 WORKDIR /app
-RUN apk update \
-  && apk add --no-cache ca-certificates tzdata \
-  && rm -rf /var/cache/apk/*
+# RUN apk update \
+#   && apk add --no-cache ca-certificates tzdata \
+#   && rm -rf /var/cache/apk/*
 COPY --from=frontend /src/dist/ ./static/
 COPY --from=backend /src/target/x86_64-unknown-linux-musl/release/multidirection-backend ./
 ENTRYPOINT [ "./multidirection-backend" ]
